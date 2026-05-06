@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# ajouchong-admin
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+아주대학교 총학생회 서비스의 관리자 화면을 만들기 위한 React 프로젝트입니다. 현재는 Create React App 기반의 초기 프론트엔드 구조가 중심이며, 관리자 기능을 붙이기 위한 출발점으로 사용할 수 있습니다.
 
-## Available Scripts
+## 프로젝트 개요
 
-In the project directory, you can run:
+이 저장소는 `ajouchong` 서비스의 관리자 클라이언트 역할을 목표로 합니다. 공지, 소개글, 제휴, Q&A, 회칙 등 운영자가 관리해야 하는 데이터를 다루는 화면을 확장할 수 있도록 React 기반 구조를 준비합니다.
 
-### `npm start`
+## 현재 구현 상태
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React 18 기반 SPA 초기 구조
+- Create React App 개발 환경
+- 기본 테스트 설정
+- `src/App.js` 중심의 초기 화면
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 기술 스택
 
-### `npm test`
+- React `18`
+- React DOM
+- React Scripts `5`
+- Testing Library
+- Web Vitals
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 폴더 구조
 
-### `npm run build`
+```text
+.
+├── public/
+├── src/
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   └── setupTests.js
+├── package.json
+└── README.md
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 실행 방법
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+개발 서버는 기본적으로 `http://localhost:3000`에서 실행됩니다.
 
-### `npm run eject`
+## 사용 가능한 스크립트
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start      # 개발 서버 실행
+npm run build  # 프로덕션 빌드
+npm test       # 테스트 실행
+npm run eject  # CRA 설정 추출
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 향후 개선 포인트
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- 로그인/권한 처리 연결
+- 관리자 전용 라우팅 구성
+- 게시글 CRUD 화면 추가
+- API 클라이언트 계층 분리
+- 배포 환경 변수와 API 서버 주소 정리
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 관련 저장소
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `toadsam/ajouchong__JJH`: Spring Boot 기반 백엔드
+- `toadsam/ajouchong-web`: 사용자용 웹 클라이언트
